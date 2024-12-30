@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: k3sdemoapp
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: k3sdemoapp
+  template:
+    metadata:
+      labels:
+        app: k3sdemoapp
+    spec:
+      containers:
+      - name: k3sdemoapp
+        image: k3sdemoapp:0.0.1
+        ports:
+        - containerPort: 8080
