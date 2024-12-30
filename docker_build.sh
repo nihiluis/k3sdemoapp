@@ -1,1 +1,0 @@
-docker build -t k3sdemoapp:0.0.1 .
